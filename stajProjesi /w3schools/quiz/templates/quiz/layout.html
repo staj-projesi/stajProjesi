@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> {{titlecontent}} </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href=" {% static 'sayfalar/sayfa.css' %} ">
 </head>
@@ -214,48 +214,11 @@
     <!-- JQuery  -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- AJAX kullanarak sayfa değiştirme  -->
-    <script>
-        $(document).ready(function () {
-            // Önceki seçili kategoriyi takip etmek için bir değişken
-            var prevSelectedCategory = '';
-        
-            // Sayfa numaralarına tıklama işlemi
-            $(document).off('click', '.pagination a.page-item').on('click', '.pagination a.page-item', function (e) {
-                e.preventDefault(); // Sayfanın yeniden yüklenmesini engelleme
-                
-                var url = $(this).attr('href'); // Tıklanan sayfa bağlantısını alma
-                var clickedCategory = $(this).text(); // Tıklanan kategori adını alma
-                $.ajax({
-                    url: url,
-                    type: 'GET',
-                    success: function (data) {
-                        // Yüklenecek veriyi sayfa içine yerleştirme
-                        $('.col-10').html($(data).find('.col-10').html());
-        
-                        // Önceki seçili kategorinin bg-success stilini kaldırma
-                        if (prevSelectedCategory) {
-                            $('.pagination a.page-item:contains(' + prevSelectedCategory + ')').parent().removeClass('bg-success');
-                        }
-        
-                        // Tıklanan kategoriye bg-success stilini ekleme
-                        $('.pagination a.page-item:contains(' + clickedCategory + ')').parent().addClass('bg-success');
-        
-                        // Tıklanan kategoriyi önceki seçili kategori olarak saklama
-                        prevSelectedCategory = clickedCategory;
-                    },
-                    error: function () {
-                        alert('Sayfa yüklenirken bir hata oluştu.');
-                    }
-                });
-            });
-        });
-        
-    </script>
 
 
 
 
+    <script src=" {% static 'js/app.js' %} "></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
             integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
             crossorigin="anonymous"></script>

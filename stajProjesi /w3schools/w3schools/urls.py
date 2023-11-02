@@ -16,8 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-
+from .views import *
 urlpatterns = [
+    path('react/',reactApp,name='index2'),
     path('admin/', admin.site.urls),
     path("w3/",include('quiz.urls')),
     path("",include('kurslar.urls')),
