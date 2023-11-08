@@ -852,11 +852,14 @@ button {
 /* navbar açılır kapanır ok img hareketleri  */
 
 @media(max-width: 768px){
+    .containerDiv{
+        width: 100%!important
+    }
     body{
         max-width: 768px;
     }
     img{
-        max-width: 500px;
+        max-width: 500px!important;
     }
     .carousel-item{
         max-width: 765px;
@@ -869,10 +872,176 @@ button {
        margin-left: 132px;
     }
     .littleBoxDiv{
-        padding-right: 3rem;
+        padding-right: 3rem!important;
     }
     .littleBox{
-        margin-left: 5rem;
-        padding: 15px;
+        margin-left: 5rem!important;
+        padding: 15px!important;
+    }
+}
+
+@media(max-width: 820px){
+    .containerDiv{
+        width: 100%!important
+    }
+    .littleBoxDiv{
+        display: flex;
+        padding-right: 10rem;
+        padding-left: 9px
+    }
+    .littleBox{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 100px;
+        margin-left: 5.1rem;
+    }
+    .otherCourse{
+        min-height: 265px;
+    }
+    
+    img{
+        max-width: 820px;
+    }
+    .navbar{
+        padding: 0px;
+    }
+}
+
+@media(max-width: 575px){
+    .containerDiv{
+        width: 100%!important
+    }
+    img{
+        width: 100%;
+    }
+    .codeEditorImg{
+        max-width: 575px;
+    }
+    /* .littleBoxDiv{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 576px;
+        flex-wrap: wrap;
+    } */
+    .otherCourse{
+        display: flex;
+        justify-content: center;
+        max-height: 150px;
+        flex-wrap: nowrap;
+    }
+    .carousel{
+        width: 100%;
+    }
+    .quizzesDiv,.exercisesDiv{
+        flex-wrap: wrap;
+        padding: 0px;
+    }
+    a{
+        padding: 0;
+    }
+    .codeEditorBtn{
+        margin-left: 25px;
+    }
+    .contentTitle{
+        font-size: 35px;
+    }
+    ul li img{
+        width: 50px;
+        height: 50px;
+    }
+    .time{
+        width: 100px!important;
+    }
+    .quizzesDiv a{
+        font-size: 23px;
+        padding: 0;
+    }
+    .exercisesDiv a{
+        font-size: 23px;
+        padding: 0; 
+    }
+    .title{
+        font-size: 30px;
+    }
+    .title2{
+        margin-left: 1rem;
+    }
+    p{
+        margin-left: 1rem;  
+    }
+    .otherCourseTitle {
+        font-size: 30px;
+    }
+    .otherCourse{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        width: 250px;
+    }
+    .otherCourse > .otherCourseTitle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .littleBoxDiv{
+        display: flex;
+        padding: 0;
+        justify-content: center;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 2rem;
+    }
+    .footer-col ul li a{
+        font-size: 1.5rem;
+    }
+    .littleBox{
+        width: 200px;
+        padding: 0;
+        margin: 0!important;
+        margin-left: 0!important;
+        margin-top: 1rem!important;
+    }
+    .w3SchoolsSpacesImg{
+        width: 100%!important;
+    }
+    .navbar-collapse{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white!important;
+        background-color: #24262b!important;
+    }
+    .nav-link{
+        color: white!important;
+    }
+    .position-relative{
+        padding: 0!important;
+        margin: 0!important;
+    }
+    .dropdown-content{
+        position: absolute;
+        top: 227px;
+        left: 0;
+        overflow-y: auto!important;
+    }
+    .col-12{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .col-3 {
+        width: 100%!important;
+    }
+    .m-5{
+        margin: 0!important;
+        padding: 0!important;
+    }
+    .row{
+        overflow-y: auto!important;
     }
 }
